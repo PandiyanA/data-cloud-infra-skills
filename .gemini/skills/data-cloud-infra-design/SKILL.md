@@ -31,20 +31,20 @@ When requiring user input to proceed, you must use the `ask_question` tool to pr
 
 Ask these 3 top-level questions in order using the `ask_question` tool:
 
-**Q1 — Data Profile & Volume:**
+**Data Profile & Volume:**
 What kind of data are you handling, and what is the expected daily volume?
 1  Massive Scale Unstructured/Raw (Images, PDFs, Mixed, > 1 TB/day)
 2  Large Scale Analytical (Structured CSV/Parquet, Logs, > 1 TB/day)
 3  Medium/Small Standard (Structured Relational, < 1 TB/day)
 4  Time-Series / IoT Telemetry (Sensor data, Metrics)
 
-**Q2 — Speed & Processing Paradigm:**
+**Speed & Processing Paradigm:**
 How should data be processed, and how fast do consumers need it?
 1  Batch Processing (Tolerant): Minutes to hours is fine.
 2  Low-Latency Batch / Micro-batch: Under 1 second turn-around.
 3  Real-Time Streaming: Continuous event ingestion (Sub-millisecond).
 
-**Q3 — Access Pattern & Consistency:**
+**Access Pattern & Consistency:**
 How will your team query the data, and do you need strict ACID transactions?
 1  Analytical SQL (No Transactional needs): Standard BI, Dashboards, Data Warehouse.
 2  Programmatic APIs (No SQL needed): Python/Spark engines read files directly.
@@ -74,7 +74,7 @@ Choose your serving tier:
 
 #### Default Path (No specific fork triggered)
 
-If the user's combination of answers does not match any fork above (e.g., Massive Unstructured + Batch + Programmatic APIs, or Medium/Small Structured + Batch + Analytical SQL), **skip the follow-up question** and proceed directly to Step 3. Use the extracted requirements from Q1–Q3 to select services from the Decision Matrices below.
+If the user's combination of answers does not match any fork above (e.g., Massive Unstructured + Batch + Programmatic APIs, or Medium/Small Structured + Batch + Analytical SQL), **skip the follow-up question** and proceed directly to Step 3. Use the extracted requirements to select services from the Decision Matrices below.
 
 ### Step 3: Apply Decision Matrices (Final Recommendation)
 
