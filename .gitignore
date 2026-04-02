@@ -1,0 +1,23 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfvars
+!terraform.tfvars.example
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Local binaries
+.bin/
+
+# Generated solution packages
+use-cases/
+
+# OS
+.DS_Store
